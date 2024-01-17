@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="reception.css">
+    <title>Sanjeevni Clinic</title>
+</head>
+<body>
+<div class="Lefttop"><img src="logo.png"alt="" class="logo">
+<span class="upleft">Yours<span class="danger">Clinic!</span></span> <h1>Doctor's  Corner!</h1>
+
+
+<div class="container">
+    <span class="line active"><a href="Dashboard.html"><span class="material-icons">dashboard <h3>Dashboard</h3></span></a><br></span>
+    <span class="line"><a href="Logout.html"><span class="material-icons">logout <h3>Log Out</h3></span></a><br></span>
+</div></div>
+
+
+
+<span class="container2"> 
+    <h2>Appointment's Schedule</h2>
+  <form>Name: <input type="text" id="name" class="input-field"> <br>
+  Age: <input type="number" id="age"> <br>
+  Gender: <input type="text" id="gender" class="input-field"> <br>
+  Disease: <input type="text" id="disease" class="input-field"> <br>
+  Time: <input type="time" id="clock" class="input-field"> <br>
+  <button onclick="sendData()">Submit</button>
+  <button type="reset">Reset</button></form>
+</span>
+  
+  <script>
+    function sendData() {
+      var name = document.getElementById('name').value;
+      var age = document.getElementById('age').value;
+      var gender= document.getElementById('gender').value;
+      var disease = document.getElementById('disease').value;
+      var  clock= document.getElementById('clock').value;
+
+      var data = {
+        input1: name,
+        input2: age,
+        input3: gender,
+        input4: disease,
+        input5: clock
+
+      };
+
+     
+      localStorage.setItem('sharedData', JSON.stringify(data));
+    }
+  </script>
+
+
+<span class="container1">
+  <img src="logo.png" alt="" class="profile"><br>
+  Hey <span class="danger">Assistant!</span>
+  Welcome you to the BBDITM Hospital! The hope of Lively. <br>
+</span>
+
+<span class="container3">
+  <span class="material-icons">sms_</span><span class="rem">Reminders</span>
+  <span class="tasks">
+    <div class="task">1.Meeting with Institute's Professor XYZ Ma'am.</div>
+    <div class="task">2.Scheduled research with Hawkinssir.</div>
+    <div class="task">3.Interview of new intern at clinic.</div>
+    <div class="task">4.Attending an award ceremony.</div>
+    <div class="task">5.Case study of a critical patient.</div>
+  </span>
+</span>
+</body>
+</html>
